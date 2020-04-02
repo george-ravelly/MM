@@ -1,0 +1,56 @@
+section{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.listar{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;    
+}
+
+.listar ul{
+    list-style: none;
+}
+
+.listar img{
+    width: 30%;
+    height: 90%;
+    padding-left: 10px;
+}
+
+.butoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+.historico{
+    border-left: 5px solid #727270;
+}
+
+.historico div{
+    width: 100%;
+    background: brown;
+}
+
+.historico div a{
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.2s;
+}
+
+.historico div a strong{
+    padding: 8px;
+}
+
+.historico div a:hover{
+    color: #fff;
+}
+
+.historico div img{
+    width: 100%;
+}

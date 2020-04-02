@@ -1,0 +1,76 @@
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #e3f2fd;
+    border-bottom: 1px groove goldenrod;
+}
+.container-header h1{
+    font-size: 34px;
+    font-weight: bold;
+    color: #737370;
+    font-family: fantasy;
+    font-style: italic;
+
+}
+
+.container-header h1 strong{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+}
+.container-header ul{
+    list-style-type: none;
+}
+
+.container-header ul li{
+    padding-top: 15px;
+    margin-right: 20px;
+}
+
+.container-header a{
+    font-size: 24px;
+    font-weight: bold;
+    color: brown;
+    border: 1px solid brown;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.2s;
+    margin-right: 32px;
+}
+
+.container-header a:hover{
+    opacity: 0.6;
+    background: brown;
+    color: #fff;
+}
+
+.barra{
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+}
+
+.barra .pesquisa{
+    margin-top: 21px;
+}
+
+.barra button{
+    margin-right: 20px;
+}   
+
+footer{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: fantasy;
+    color: brown;
+    background-color: #e3f2fd;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+footer address a{
+    text-decoration: none;
+}
