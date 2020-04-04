@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FiPlusSquare } from "react-icons/fi"
 import Header from "../Componets/header";
 import Footer from "../Componets/Footer";
 import "./style.css";
@@ -12,7 +13,7 @@ export default function Detalhes(){
             <div className="container">
                 <div className="row">
                     <div className="col-4 imagem">
-                        <img src={require("../img/one punch.jpg")} />
+                        <img src={require("../img/one punch.jpg")} alt="nome manga" />
                     </div>
                     <div className="col-8 detalhes">
                         <strong>One Punch Man</strong>
@@ -28,8 +29,20 @@ export default function Detalhes(){
                             Lorem nostrud.
                         </p>
                         <div className="detalhes">
-                            <strong>Vol.  </strong>
+                            <strong>Vol.</strong><br />
                             <Link to="/ler" className="btn btn-light">01</Link>
+                            <Link to="/ler" className="btn btn-light">02</Link>
+                            <Link to="/ler" className="btn btn-light">03</Link>
+                            <Link to="/ler" className="btn btn-light">04</Link>
+                            <Link to="/ler" className="btn btn-light">05</Link>
+                            <Link to="/ler" className="btn btn-light">06</Link>
+                            <Link to="/ler" className="btn btn-light">07</Link>
+                            <Link to="/ler" className="btn btn-light">08</Link>
+                            <Link to="/ler" className="btn btn-light">09</Link>
+                            <Link to="/ler" className="btn btn-light">10</Link>
+                            <button className="btn btn-link">
+                                <FiPlusSquare size={40} color="white"/>
+                            </button>
                         </div>
                     </div>
                 </div>

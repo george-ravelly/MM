@@ -1,3 +1,9 @@
 .imagem img{
     width: 80%;
 }
+
+.detalhes a{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px;
+}
