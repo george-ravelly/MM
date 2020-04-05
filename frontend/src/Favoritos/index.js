@@ -17,7 +17,7 @@ export default function Fav(){
                         </li>
                         <li>
                             <div className="detalhes">
-                                <strong>Naruto - Vol. 3</strong>
+                                <strong>One Piece</strong>
                                 <p>
                                     Novo Manga...
                                     Novo Manga...
@@ -40,7 +40,7 @@ export default function Fav(){
                         </li>
                         <li>
                             <div className="detalhes">
-                                <strong>Naruto - Vol. 3</strong>
+                                <strong>One Piece</strong>
                                 <p>
                                     Novo Manga...
                                     Novo Manga...
@@ -63,7 +63,7 @@ export default function Fav(){
                         </li>
                         <li>
                             <div className="detalhes">
-                                <strong>Naruto - Vol. 3</strong>
+                                <strong>One Piece</strong>
                                 <p>
                                     Novo Manga...
                                     Novo Manga...
@@ -86,7 +86,7 @@ export default function Fav(){
                         </li>
                         <li>
                             <div className="detalhes">
-                                <strong>Naruto - Vol. 3</strong>
+                                <strong>One Piece</strong>
                                 <p>
                                     Novo Manga...
                                     Novo Manga...

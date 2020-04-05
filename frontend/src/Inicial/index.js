@@ -10,15 +10,15 @@ export default function Inicial(){
             <Header />
             <section className="container-fluid">
                 <div className="row">
-                    <div className="col-9">
+                    <div className="col-12 col-md-9">
                         <h1 className="headers"><span>#</span>Ultimos Adicionados</h1>
                         <div className="row">
-                            <div className="col-6 listar">
+                            <div className="col-12 col-md-6 listar">
                                 <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
-                                            <strong>Naruto - Vol. 3</strong>
+                                            <strong>Naruto</strong>
                                             <p>
                                                 Novo Manga...
                                                 Novo Manga...
@@ -36,12 +36,12 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-6 listar">
+                            <div className="col-12 col-md-6 listar">
                                 <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
-                                            <strong>Naruto - Vol. 3</strong>
+                                            <strong>Naruto</strong>
                                             <p>
                                                 Novo Manga...
                                                 Novo Manga...
@@ -59,12 +59,12 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-6 listar">
+                            <div className="col-12 col-md-6 listar">
                                 <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
-                                            <strong>Naruto - Vol. 3</strong>
+                                            <strong>Naruto</strong>
                                             <p>
                                                 Novo Manga...
                                                 Novo Manga...
@@ -82,12 +82,12 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-6 listar">
+                            <div className="col-12 col-md-6 listar">
                                 <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
-                                            <strong>Naruto - Vol. 3</strong>
+                                            <strong>Naruto</strong>
                                             <p>
                                                 Novo Manga...
                                                 Novo Manga...
@@ -111,7 +111,7 @@ export default function Inicial(){
                             <button className="btn btn-success">Proximo</button>
                         </div>
                     </div>
-                    <div className="col-3 historico">
+                    <div className="col-12 col-md-3 historico">
                         <h1 className="headers"><span>#</span>Histórico</h1>
                         <div>
                             <img src={require("../img/one punch.jpg")} alt="naruto" width="250"/>

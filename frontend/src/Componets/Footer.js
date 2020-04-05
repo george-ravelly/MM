@@ -11,6 +11,9 @@ export default function Footer(){
                     <FiGithub size={24} />GitHub
                 </a>
             </adress>
+            <p>
+                <small style={{fontSize:12}}>Imagens meramente ilustrativas!!!</small>
+            </p>
         </footer>
     )
 }
