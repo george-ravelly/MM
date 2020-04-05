@@ -13,8 +13,8 @@ export default function Inicial(){
                     <div className="col-12 col-md-9">
                         <h1 className="headers"><span>#</span>Ultimos Adicionados</h1>
                         <div className="row">
-                            <div className="col-12 col-md-6 listar">
-                                <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
+                            <div className="col-12 col-lg-6 listar">
+                                <img src={require("../img/naruto.jpg")} alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
@@ -36,8 +36,8 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-12 col-md-6 listar">
-                                <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
+                            <div className="col-12 col-lg-6 listar">
+                                <img src={require("../img/naruto.jpg")} alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
@@ -59,8 +59,8 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-12 col-md-6 listar">
-                                <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
+                            <div className="col-12 col-lg-6 listar">
+                                <img src={require("../img/naruto.jpg")} alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
@@ -82,8 +82,8 @@ export default function Inicial(){
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-12 col-md-6 listar">
-                                <img src={require("../img/naruto.jpg")} width="200" alt="naruto" />
+                            <div className="col-12 col-lg-6 listar">
+                                <img src={require("../img/naruto.jpg")} alt="naruto" />
                                 <ul>
                                     <li>
                                         <div className="detalhes">
@@ -111,7 +111,7 @@ export default function Inicial(){
                             <button className="btn btn-success">Proximo</button>
                         </div>
                     </div>
-                    <div className="col-12 col-md-3 historico">
+                    <div className="col-12 col-lg-3 historico">
                         <h1 className="headers"><span>#</span>Histórico</h1>
                         <div>
                             <img src={require("../img/one punch.jpg")} alt="naruto" width="250"/>

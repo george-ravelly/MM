@@ -12,7 +12,7 @@ export default function Footer(){
                 </a>
             </adress>
             <p>
-                <small style={{fontSize:12}}>Imagens meramente ilustrativas!!!</small>
+                <small style={{fontSize:16, color: "blue"}}>Imagens meramente ilustrativas!!!</small>
             </p>
         </footer>
     )

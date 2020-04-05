@@ -1,0 +1,45 @@
+.title-container{
+    width: 100%;
+    background-color: #e3f2fd;
+}
+
+.title-container h1{
+    font-size: 34px;
+    font-weight: bold;
+    color: #737370;
+    font-family: fantasy;
+    font-style: italic;
+
+}
+
+.title-container h1 strong{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+.form-container{
+    width: 340px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.form-container form input{
+    margin-bottom: 5px;
+}
+
+.form-container form a+a{
+    margin-top: 5px;
+    color: brown;
+    display: block;
+}
+
+.form-container figure img{
+    width: 70%;
+}

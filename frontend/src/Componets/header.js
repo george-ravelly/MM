@@ -10,7 +10,14 @@ export default function Header(){
         <header>
             <div className="container-header">
                 <Link to="/" style={{backgroundColor: "#e3f2fd", border: 0}}>
-                    <h1>Meus<strong>Mangás</strong></h1>
+                    <h1>
+                        <img 
+                            src={require("../assets/logo_sem_fundo.png")} 
+                            width="80" 
+                            alt="logo"
+                        />
+                        Meus<strong>Mangás</strong>
+                    </h1>
                 </Link>
                 <ul>
                     <li>
