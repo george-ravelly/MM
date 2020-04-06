@@ -15,10 +15,18 @@ module.exports = {
     },
 
     async index(request, response){
+        const { pages = 1 } = request.query;
         const id_usuario = request.headers.authorization;
+
+        const [count] = await conexao('mangas')
+            .where('id_usuario',id_usuario).count();
+
         const data = await conexao('mangas')
-            .where('id_usuario',id_usuario)
-            .select('*');
+            .limit(4)
+            .offset((pages-1)*4)
+            .where('id_usuario',id_usuario).select('*');
+
+        response.header('x-total-cout', count['count(*)']); 
         return response.json(data);
     },
 

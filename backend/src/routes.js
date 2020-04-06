@@ -2,18 +2,19 @@ const express = require('express');
 const routes = express.Router();
 
 const usuario = require('./controllers/UsuarioControle');
-const manga = require('./controllers/MangasControle');
+const mangas = require('./controllers/MangasControle');
 const volume = require('./controllers/VolumeControle');
+const Sessao = require('./controllers/SessaoControle')
 
 
-routes.get('/login', usuario.index);
-routes.post('/login', usuario.create);
+routes.post('/sessao', Sessao.create);
+routes.post('/usuario', usuario.create);
 
-routes.get('/mangas', manga.index);
-routes.post('/mangas', manga.create);
+routes.get('/mangas', mangas.index);
+routes.post('/mangas', mangas.create);
 routes.delete('/mangas/:id', manga.delete);
 
-routes.get('/volume', volume.index);
-routes.post('/volume', volume.create);
+routes.get('/volumes', volume.index);
+routes.post('/volumes', volume.create);
 
 module.exports = routes;

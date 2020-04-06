@@ -13,7 +13,7 @@ module.exports = {
     },
 
     async index(request, response){
-        const data = await conexao('usuarios').select();
+        const data = await conexao('usuarios').select('*');
         return response.json({data});
     }
 }
