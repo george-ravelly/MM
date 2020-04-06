@@ -3,12 +3,12 @@ const conexao = require('../database/connection');
 module.exports = {
     async create(request, response){
         const id_usuario = request.headers.authorization;
-        const {nome, autor, descricacao} = request.body;
+        const {nome, autor, descricao} = request.body;
 
         const id = await conexao('mangas').insert({
             nome,
             autor,
-            descricacao,
+            descricao,
             id_usuario
         });
         return response.json({id});

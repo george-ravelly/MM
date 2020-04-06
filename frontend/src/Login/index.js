@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+
 import { FiArrowRight } from "react-icons/fi";
 import api from "../api";
 
@@ -7,15 +8,44 @@ import Footer from "../Componets/Footer";
 import "./style.css";
 
 export default function Login(){
-    async function LoginUser(e){
+    const [login, setLogin] = useState('');
+    const [senha, setSenha] = useState('');
+    const [novoLogin, setNovoLogin] = useState('');
+    const [novaSenha, setNovaSenha] = useState('');
 
+    const historico = useHistory();
+    async function LoginUser(e){
+        e.preventDefault();
+        const data ={login, senha}
+
+        try {
+            const response = await api.post('sessao', data);
+
+            localStorage.setItem('id',response.data.usuario.id);
+            localStorage.setItem('login',login);
+
+            historico.push('/inicial');
+
+        } catch (error) {
+            alert(`Login ou senha incorretos`);
+        }
+        
     }
 
     async function CadastrarUser(e){
         e.preventDefault();
-        await api.post('/login',{
+        const data = {login: novoLogin, senha: novaSenha};
+        console.log(data);
 
-        })
+        try {
+            await api.post('usuarios',data);
+            setNovaSenha('');
+            setNovoLogin('');
+            alert('Cadastro feito com sucesso!!!');
+
+        } catch (error) {
+            alert('Algo deu errado!')
+        }
     }
     return (
         <main>
@@ -31,49 +61,83 @@ export default function Login(){
             </div>
             <section className="container login-container">
                 <div className="form-container">
-                    <figure>
-                        <img src={require("../assets/logo_sem_fundo.png")} alt="logo" />
-                    </figure>
+                    <img src={require("../assets/logo_sem_fundo.png")} alt="logo" />
                     <form onSubmit={LoginUser}>
-                        <input placeholder="Login" />
-                        <input type="password" placeholder="Senha" />
-                        <Link to="/inicial" type="button" className="btn btn-success">Entrar</Link>
-                        <Link 
-                            type="button" 
-                            data-toggle="modal" 
-                            data-target="#cadastrarUser"
+                        <input 
+                            placeholder="Login" 
+                            value={login}
+                            onChange={e => setLogin(e.target.value)}
+                        />
+                        <input 
+                            type="password" 
+                            placeholder="Senha" 
+                            value={senha}
+                            onChange={e => setSenha(e.target.value)}
+                        />
+                        <button  
+                            type="submit" 
+                            className="btn btn-success"
                         >
-                            <FiArrowRight size={16}/> não tenho cadastro!!!
-                        </Link>
+                            Entrar
+                        </button>
                     </form>
+                    <Link 
+                        type="button" 
+                        data-toggle="modal" 
+                        data-target="#cadastrarUser"
+                    >
+                        <FiArrowRight size={16}/> não tenho cadastro!!!
+                    </Link>
                 </div>
             </section>
             <section className="cadastrar">
-                <div className="modal fade" id="cadastrarUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div 
+                    className="modal fade" 
+                    id="cadastrarUser" 
+                    tabindex="-1" 
+                    role="dialog" 
+                    aria-labelledby="exampleModalLabel" 
+                    aria-hidden="true"
+                >
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header"> 
-                                <h1 className="headers" style={{color: "black"}}><span>#</span>Cadastrar</h1>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <h1 
+                                    className="headers" 
+                                    style={{color: "black"}}
+                                >
+                                    <span>#</span>Cadastrar
+                                </h1>
+                                <button 
+                                    type="button" 
+                                    className="close" 
+                                    data-dismiss="modal" 
+                                    aria-label="Close"
+                                >
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div className="modal-body">
-                                <form>
-                                    <input placeholder="Login" />
-                                    <input type="password" placeholder="Senha" />
+                                <form onSubmit={CadastrarUser}>
+                                    <input 
+                                        placeholder="Login" 
+                                        value={novoLogin}
+                                        onChange={e => setNovoLogin(e.target.value)}
+                                    />
+                                    <input 
+                                        type="password" 
+                                        placeholder="Senha" 
+                                        value={novaSenha}
+                                        onChange={e => setNovaSenha(e.target.value)}
+                                    />
+                                    <button 
+                                        type="submit" 
+                                        className="btn btn-success"
+                                    >
+                                        Cadastrar
+                                    </button>
                                 </form>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                <button 
-                                    onClick={CadastrarUser}
-                                    type="button" 
-                                    className="btn btn-success"
-                                >
-                                    Cadastrar
-                                </button>
-                            </div>
+                            </div>                                
                         </div>
                     </div>
                 </div>

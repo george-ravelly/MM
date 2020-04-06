@@ -5,8 +5,11 @@ section{
 
 .listar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 8px;    
+}
+.detalhes small {
+    color: grey;
 }
 
 .listar ul{

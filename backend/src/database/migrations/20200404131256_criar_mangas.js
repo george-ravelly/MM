@@ -3,7 +3,7 @@ exports.up = function(knex) {
         table.increments();
         table.string('nome').notNullable();
         table.string('autor').notNullable();
-        table.string('descricacao').notNullable();
+        table.string('descricao').notNullable();
         table.integer('id_usuario').notNullable();
 
         table.foreign('id_usuario').references('id').inTable('usuarios');

@@ -8,11 +8,13 @@ const Sessao = require('./controllers/SessaoControle')
 
 
 routes.post('/sessao', Sessao.create);
-routes.post('/usuario', usuario.create);
+routes.post('/usuarios', usuario.create);
+routes.get('/usuarios', usuario.index);
+routes.delete('/usuarios', usuario.delete);
 
 routes.get('/mangas', mangas.index);
 routes.post('/mangas', mangas.create);
-routes.delete('/mangas/:id', manga.delete);
+routes.delete('/mangas/:id', mangas.delete);
 
 routes.get('/volumes', volume.index);
 routes.post('/volumes', volume.create);

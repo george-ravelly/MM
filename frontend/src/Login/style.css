@@ -30,16 +30,20 @@
     padding: 14px;
 }
 
-.form-container form input{
-    margin-bottom: 5px;
+.form-container form input,
+.form-container form a{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.form-container form a+a{
-    margin-top: 5px;
+
+.form-container form+a{
+    margin-top: 10px;
     color: brown;
     display: block;
 }
 
-.form-container figure img{
-    width: 70%;
+.form-container img{
+    width: 50%;
 }
