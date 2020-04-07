@@ -14,6 +14,13 @@ module.exports = {
         return response.json({id});
     },
 
+    async detalhes(request, response){
+        const {id_manga} = request.params;
+        const manga = await conexao('mangas').where('id',id_manga).select('*').first();
+        const volumes = await conexao('volume').where('id_manga',id_manga).select('*');
+        return response.json({manga, volumes});
+    },
+
     async index(request, response){
         const { pages = 1 } = request.query;
         const id_usuario = request.headers.authorization;

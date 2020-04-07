@@ -24,8 +24,6 @@ export default function Header(){
                 </Link>
                 <ul>
                     <li>
-                        <Link to="/mangas">Mangás</Link>
-                        <Link to="/favoritos">Favoritos</Link>
                         <Link to="/" onClick={logoutUser}><FiLogOut size={40} color="gray"/></Link>
                     </li>
                 </ul>

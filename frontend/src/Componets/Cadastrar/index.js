@@ -8,8 +8,7 @@ export default function Cadastrar(){
     const [descricao, setDescricao] = useState('');
     const id = localStorage.getItem('id');
 
-    async function cadastrarManga(e){
-        e.preventDefault();
+    async function cadastrarManga(){
         const data = {nome, autor, descricao};
         
         try {

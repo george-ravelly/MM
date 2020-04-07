@@ -4,7 +4,7 @@ const routes = express.Router();
 const usuario = require('./controllers/UsuarioControle');
 const mangas = require('./controllers/MangasControle');
 const volume = require('./controllers/VolumeControle');
-const Sessao = require('./controllers/SessaoControle')
+const Sessao = require('./controllers/SessaoControle');
 
 
 routes.post('/sessao', Sessao.create);
@@ -13,8 +13,9 @@ routes.get('/usuarios', usuario.index);
 routes.delete('/usuarios', usuario.delete);
 
 routes.get('/mangas', mangas.index);
+routes.get('/detalhes/:id_manga', mangas.detalhes);
 routes.post('/mangas', mangas.create);
-routes.delete('/mangas/:id', mangas.delete);
+routes.delete('/mangas/:id_manga', mangas.delete);
 
 routes.get('/volumes', volume.index);
 routes.post('/volumes', volume.create);
