@@ -8,7 +8,12 @@ module.exports = {
             volume,
             id_manga
         });
-        return response.json({errror:"deu certo"});
+        return response.json({error:"deu certo"});
+    },
+    async ultVol(request, response){
+        const volume = await conexao('volume').max('id');
+        const ultManga = await conexao('mangas').where(volume.id_manga = 'id').select('*');
+        return response.json(ultManga);
     },
 
     async index(request, response){

@@ -18,6 +18,7 @@ routes.post('/mangas', mangas.create);
 routes.delete('/mangas/:id_manga', mangas.delete);
 
 routes.get('/volumes', volume.index);
+routes.get('/ultimoVol', volume.ultVol);
 routes.post('/volumes', volume.create);
 
 module.exports = routes;

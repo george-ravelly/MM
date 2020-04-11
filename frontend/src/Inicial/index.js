@@ -7,7 +7,7 @@ import Header from "../Componets/header";
 import Footer from "../Componets/Footer";
 
 export default function Inicial(){
-    const [mangas, setMangas] = useState([]); 
+    const [mangas, setMangas] = useState([]);
     const [pages, setPages] = useState(1);
     const id = localStorage.getItem('id');
     const [total, setTotal] = useState(0)
