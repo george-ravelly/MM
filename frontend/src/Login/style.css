@@ -3,9 +3,16 @@
     background-color: #e3f2fd;
 }
 
+
+.fundo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+}
+
 .title-container h1{
     font-size: 34px;
-    font-weight: bold;
     color: #737370;
     font-family: fantasy;
     font-style: italic;

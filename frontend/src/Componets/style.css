@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 .container-header{
     display: flex;
     justify-content: space-between;
@@ -45,20 +50,21 @@
     background: brown;
     color: #fff;
 }
+.user{
+    font-size: 20px;
+    color: black;
+    transition: 0.2s;
+}
+
+.user:hover{
+    color: brown;
+}
 
 .barra{
-    display: flex;
-    justify-content: flex-end;
+    display: inline-block;
+    text-align: right;
     padding: 8px;
-}
-
-.barra .pesquisa{
-    margin-top: 21px;
-}
-
-.barra button{
-    margin-right: 20px;
-}   
+} 
 
 footer{
     text-align: center;

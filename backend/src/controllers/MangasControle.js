@@ -28,13 +28,13 @@ module.exports = {
         const [count] = await conexao('mangas')
             .where('id_usuario',id_usuario).count();
 
-        const data = await conexao('mangas')
+        const mangas = await conexao('mangas')
             .limit(4)
             .offset((pages-1)*4)
             .where('id_usuario',id_usuario).select('*');
 
         response.header('x-total-cout', count['count(*)']); 
-        return response.json(data);
+        return response.json({mangas, 'total': count['count(*)']});
     },
 
     async delete(request, response){

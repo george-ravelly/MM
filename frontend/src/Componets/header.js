@@ -6,6 +6,7 @@ import Pesquisar from "./Pesquisar";
 import "./style.css";
 
 export default function Header(){
+    const user = localStorage.getItem('login')
     function logoutUser(){
         localStorage.clear();
     }
@@ -18,19 +19,23 @@ export default function Header(){
                             src={require("../assets/logo_sem_fundo.png")} 
                             width="80" 
                             alt="logo"
+                            className="d-none d-sm-inline"
                         />
-                        Meus<strong>Mangás</strong>
+                        Meus<strong>Mangás</strong> 
                     </h1>
                 </Link>
                 <ul>
                     <li>
-                        <Link to="/" onClick={logoutUser}><FiLogOut size={40} color="gray"/></Link>
+                        <Link to="/" onClick={logoutUser}><FiLogOut size={40} color="gray"/></Link><br />
+                        <strong className="user">{user}</strong>
                     </li>
                 </ul>
             </div>
-            <div className="barra">
-                <Pesquisar />
-                <Cadastrar />                
+            <div className="d-flex flex-row-reverse wd-100">
+                <div className="barra">
+                    <Pesquisar />
+                    <Cadastrar />                
+                </div>
             </div>
         </header>
     )

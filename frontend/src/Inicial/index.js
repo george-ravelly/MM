@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import api from "../api";
 
 import "./style.css";
+
 import Header from "../Componets/header";
 import Footer from "../Componets/Footer";
 
@@ -20,21 +21,19 @@ export default function Inicial(){
                 Authorization: id
             }
         }).then(response => {
-            setMangas(response.data);
-            setTotal(response.headers['x-total-cout']);
+            setMangas(response.data.mangas);
+            setTotal(response.data.total);
         })
     },[id, pages]);
 
     function paginacao(e){
         //proximo
-        if(e>pages && e <= total){
+        if(e>pages && (e-1)*4 < total){
             setPages(e);
-            console.log(total);
         }
         //anterior
         else if(e>0 && e < pages){
             setPages(e);
-            console.log(total);
         }
     }
 
@@ -60,7 +59,7 @@ export default function Inicial(){
                                     />
                                     <ul>
                                         <li>
-                                            <div className="detalhes">
+                                            <div className="container detalhes">
                                                 <strong>{manga.nome}</strong><br />
                                                 <small>{manga.autor}</small>
                                                 <p>{manga.descricao}</p>
