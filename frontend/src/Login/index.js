@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import api from "../api";
 
-import Footer from "../Componets/Footer";
+import Footer from "../Componets/footer";
 import "./style.css";
 
 export default function Login(){

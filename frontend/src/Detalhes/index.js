@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Link, useParams} from "react-router-dom";
 import { FiPlusSquare } from "react-icons/fi"
 import Header from "../Componets/header";
-import Footer from "../Componets/Footer";
+import Footer from "../Componets/footer";
 import "./style.css";
 import api from "../api";
 

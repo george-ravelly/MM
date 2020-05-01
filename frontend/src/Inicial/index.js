@@ -5,15 +5,22 @@ import api from "../api";
 import "./style.css";
 
 import Header from "../Componets/header";
-import Footer from "../Componets/Footer";
+import Footer from "../Componets/footer";
 
 export default function Inicial(){
     const [mangas, setMangas] = useState([]);
+    const [ultManga, setUltManga] = useState([]);
     const [pages, setPages] = useState(1);
     const id = localStorage.getItem('id');
     const [total, setTotal] = useState(0)
 
     const historico = useHistory();
+
+
+    async function ultVol(){
+        const response = await api.get('ultimoVol');
+        setUltManga(response.data.ultManga[0]);
+    }
 
     useEffect(() => {
         api.get(`mangas?pages=${pages}`, {
@@ -23,8 +30,10 @@ export default function Inicial(){
         }).then(response => {
             setMangas(response.data.mangas);
             setTotal(response.data.total);
+        }).then(() => {
+            ultVol();
         })
-    },[id, pages]);
+    },[id, pages]);     
 
     function paginacao(e){
         //proximo
@@ -94,8 +103,8 @@ export default function Inicial(){
                         <h1 className="headers"><span>#</span>Último adicionado</h1>
                         <div>
                             <img 
-                                src={require("../img/1.jpg")} 
-                                alt="one" 
+                                src={require(`../img/${ultManga.id}.jpg`)} 
+                                alt={ultManga.nome} 
                             />
                             <Link 
                                 to="/detalhes" 
@@ -105,7 +114,7 @@ export default function Inicial(){
                                     style={{maxWidth: "250px"}} 
                                     className="d-block text-truncate"
                                 >
-                                    one punch
+                                    {ultManga.nome}
                                 </strong>
                             </Link>
                         </div>         
